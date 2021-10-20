@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  serverUrl: "localhost:8080/",
+  serverUrl: "mpu-cad-server.herokuapp.com/",
   production: false
 };
 
