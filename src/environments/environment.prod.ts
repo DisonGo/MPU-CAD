@@ -1,4 +1,4 @@
 export const environment = {
-  serverUrl: "mpu-cad-server.herokuapp.com/",
+  serverUrl: "https://mpu-cad-server.herokuapp.com",
   production: true
 };
