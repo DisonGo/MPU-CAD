@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { HttpServiceService } from './services/http-service.service';
 import { Project } from './shared/project.interface';
-import { User } from './shared/user.interface';
+import { TeamWorker} from './shared/team-worker.interface';
 
 @Component({
   selector: 'app-root',
@@ -9,20 +10,7 @@ import { User } from './shared/user.interface';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  users:User[] = [];
-  projects:Project[] = [];
-  constructor(private serv:HttpServiceService){}  
-  async getData(){
-    try{
-      this.users = await this.serv.getUsers();
-      this.projects= await this.serv.getProjects();
-    }catch(e){
-      console.log(e);
-    }finally{
-      console.log(this.users,this.projects);
-    }
-  }
+  constructor(){}  
   ngOnInit(): void {
-    this.getData()
   }
 }

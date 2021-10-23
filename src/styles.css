@@ -5,6 +5,9 @@ a {
     color: white;
     scroll-behavior: smooth;
 }
+*{
+    font-family: 'Gilroy', light !important;
+}
 body {
     font-family: 'Gilroy', light;
     font-weight: 400;

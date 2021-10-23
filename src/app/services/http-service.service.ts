@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { User } from '../shared/user.interface';
+import { TeamWorker } from '../shared/team-worker.interface';
 import { Project } from '../shared/project.interface';
 
 @Injectable({
@@ -12,22 +12,22 @@ export class HttpServiceService {
   constructor(private http:HttpClient) {
   }
   
-  //Users
+  //TeamWorkers
   
   getUsers() {
-    return this.http.get<User[]>(`${environment.serverUrl}/users`).toPromise();
+    return this.http.get<TeamWorker[]>(`${environment.serverUrl}/teamWorkers`).toPromise();
   }
 
-  createUser(user: User) {
-    return this.http.post(`${environment.serverUrl}/users`, user).toPromise();
+  createUser(TeamWorker: TeamWorker) {
+    return this.http.post(`${environment.serverUrl}/teamWorkers`, TeamWorker).toPromise();
   }
 
-  updateUser(user: User) {
-    return this.http.put(`${environment.serverUrl}/users/${user._id}`, user).toPromise();
+  updateUser(TeamWorker: TeamWorker) {
+    return this.http.put(`${environment.serverUrl}/teamWorkers/${TeamWorker._id}`, TeamWorker).toPromise();
   }
 
-  deleteUser(user: User) {
-    return this.http.delete(`${environment.serverUrl}/users/${user._id}`).toPromise();
+  deleteUser(TeamWorker: TeamWorker) {
+    return this.http.delete(`${environment.serverUrl}/teamWorkers/${TeamWorker._id}`).toPromise();
   }
 
   //Projects

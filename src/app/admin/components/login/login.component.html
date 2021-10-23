@@ -1,0 +1,62 @@
+<!-- <div class="section">
+  <div class="container container-l">
+    <h1 style="font-size: 2.5em;">Предпросмотр</h1>
+  </div>
+</div>
+<div id="projects" class="section">
+
+  <div id="projContainer" class="container container-l" style="flex-direction: column;">
+    <h1>Наши проекты</h1>
+  </div>
+  <splide id="projectsSplide" [options]="{ type: 'loop',
+              perPage :3,
+              perMove:1 ,
+              gap : '2rem' ,
+              height:'auto',
+              rewind: 'true'}">
+    <splide-slide *ngFor="let project of projects" style="max-width: 100%;">
+      <div class="projectInfo">
+        <div class="container">
+          <h4>{{project.name}}</h4>
+          <img src="{{env.serverUrl}}/{{project.frontImgLink}}" alt="">
+          <div class="projectText">{{project.shortDescr}}</div>
+          <button class="readMoreBut">Подробнее</button>
+        </div>
+      </div>
+    </splide-slide>
+  </splide>
+</div>
+<div id="team" class="section">
+  <div class="container container-l" style="flex-direction: column;">
+    <h1>Наша команда</h1>
+  </div>
+  <splide [options]="{type:'loop',perPage:5,perMove:1,autoplay:true, 
+          interval: 4000,
+          rewind: true}">
+    <splide-slide *ngFor="let user of users">
+      <div class="userCard">
+        <div class="container container-l">
+          <img src="{{env.serverUrl}}/{{user.imgLink}}" alt="">
+          <h4>{{user.surname}} {{user.name}}</h4>
+          <p style="text-align: center;">{{user.project}}</p>
+        </div>
+      </div>
+    </splide-slide>
+  </splide>
+</div> -->
+<form [formGroup]="form" class="container container-s" style="flex-wrap: wrap;flex-direction: column;">
+  <fieldset>
+    <legend>Login</legend>
+    <div class="form-field">
+      <label>Email:</label>
+      <input name="email" formControlName="email">
+    </div>
+    <div class="form-field">
+      <label>Password:</label>
+      <input name="password" formControlName="password" type="password">
+    </div>
+    <div class="form-buttons">
+      <button class="button button-primary" (click)="login()">Login</button>
+    </div>
+  </fieldset>
+</form>

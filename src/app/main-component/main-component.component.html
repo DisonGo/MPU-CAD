@@ -1,0 +1,104 @@
+<app-header></app-header>
+<div id="main" class="">
+  <div class="container" style="flex-direction: column; flex-wrap: wrap; height: 100%;">
+    <img id="poster" src="{{env.serverUrl}}/imgs/MPU_team.jpg">
+    <div id="mainContainer" class="container container-l">
+      <div class="container" style="position: relative; align-items:  center; justify-items: center;">
+        <h1 style="font-size: 10rem;" id="welcome">MPU Team</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="projects" class="section">
+
+  <div id="projContainer" class="container container-l" style="flex-direction: column;">
+    <h1>Наши проекты</h1>
+  </div>
+  <splide id="projectsSplide"
+    [options]="{ type: 'loop',
+      perPage :3,
+      perMove:1 ,
+      gap : '2rem' ,
+      height:'auto',
+      rewind: 'true'}">
+    <splide-slide *ngFor="let project of projects" style="max-width: 100%;">
+      <div class="projectInfo">
+        <div class="container">
+          <h4>{{project.name}}</h4>
+          <img src="{{env.serverUrl}}/{{project.frontImgLink}}" alt="">
+          <div class="projectText">{{project.shortDescr}}</div>
+          <button class="readMoreBut">Подробнее</button>
+        </div>
+      </div>
+    </splide-slide>
+  </splide>
+</div>
+<div id="about" class="section">
+  <div class="skewBackground">
+    <div class="skewGray skewElem"></div>
+    <div class="skewDarkGray skewElem"></div>
+  </div>
+  <div class="container container-l">
+    <h1>О нас</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt quaerat nemo? Deserunt, quasi. Iure,
+    corrupti. Consequuntur dolorem iure atque veritatis quidem, eius excepturi? Ipsa, pariatur? Ea sint officiis
+    assumenda!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt quaerat nemo? Deserunt, quasi. Iure,
+    corrupti. Consequuntur dolorem iure atque veritatis quidem, eius excepturi? Ipsa, pariatur? Ea sint officiis
+    assumenda!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt quaerat nemo? Deserunt, quasi. Iure,
+    corrupti. Consequuntur dolorem iure atque veritatis quidem, eius excepturi? Ipsa, pariatur? Ea sint officiis
+    assumenda!
+  </div>
+</div>
+<div id="team" class="section">
+  <!-- <div class="skewBackground">
+      <div class="skewGray skewElem"></div>
+      <div class="skewDarkGray skewElem"></div>
+  </div> -->
+  <div class="container container-l" style="flex-direction: col umn;">
+    <h1>Наша команда</h1>
+  </div>
+  <splide [options] = "{type:'loop',perPage:5,perMove:1,autoplay:true, 
+  interval: 4000,
+  rewind: true}">
+      <splide-slide *ngFor="let TeamWorker of TeamWorkers">
+          <div class="userCard">
+              <div class="container container-l">
+                  <img src="{{env.serverUrl}}/{{TeamWorker.imgLink}}" alt="">
+                  <h4>{{TeamWorker.surname}} {{TeamWorker.name}}</h4>
+                  <p style="text-align: center;">{{TeamWorker.project}}</p>
+              </div>
+          </div>
+      </splide-slide>
+  </splide>
+</div>
+<div id="contact" class="section">
+  <div class="container container-l">
+    <h1>Контакты</h1>
+    <div class="links">
+      <p>Телефон: +7 (123)456-78-90
+        Почта: example@mail.ru</p>
+      <div class="container" style="gap:10px">
+        <a href="" class="linkButContainer">
+          <img src="{{env.serverUrl}}/imgs/vk.png" alt="" class="linkBut">
+          <div class="linkButHoverImg"></div>
+        </a>
+        <a href="" class="linkButContainer">
+          <img src="{{env.serverUrl}}/imgs/youtube.png" alt="" class="linkBut">
+          <div class="linkButHoverImg"></div>
+        </a>
+        <a href="" class="linkButContainer">
+          <img src="{{env.serverUrl}}/imgs/instagram.jpg" alt="" class="linkBut">
+          <div class="linkButHoverImg"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mFoot" class="">
+  <div class="container container-l" style="align-items: center; height: 100%;">
+    ©2021 MPU Team
+  </div>
+</div>
+
