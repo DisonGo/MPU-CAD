@@ -1,0 +1,21 @@
+<header id="adminHeader">
+  <div class="container container-l">
+    <div class="container" id="adminHeadContainer">
+      <div class="mHeadElems">
+        <a [routerLink]="'preview'" [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{exact:true}">Превью</a></div>
+      <div class="mHeadElems">
+        <a [routerLink]="'projects'" [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{exact:true}">Проекты</a></div>
+      <div class="mHeadElems">
+        <a [routerLink]="'users'" [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{exact:true}">Команда</a></div>
+      <div class="mHeadElems">
+        <a [routerLink]="'imgs'" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"
+          >Картинки</a></div>
+      <div class="mHeadElems">
+        <a [routerLink]="''" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}"
+          (click)="logOut()">Выйти</a></div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,19 @@
+.imgList{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+img{
+    display: block;
+    max-width:500px;
+    max-height: 200px;
+    border-radius: 1em;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border:2px solid black;
+}
+.selectedImage{
+    box-sizing: border-box;
+    border:2px solid red;
+    transition: .05s;
+}

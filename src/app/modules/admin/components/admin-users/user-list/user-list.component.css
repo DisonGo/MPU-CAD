@@ -1,0 +1,42 @@
+.teamWorkerElem{
+    font-size: 0.7em;
+    color: white;
+    padding: 4px 5px;
+}
+.teamWorkerElem>#teamWorker:hover{
+    cursor: pointer;
+    transition: .2s;
+    color: #ff6701; 
+}
+.selected{
+    background-color: #ff6701;
+    color: black;
+}
+.selected>#teamWorker:hover{
+    color: black;
+    transition: .2s;
+}
+#teamWorkerListHeader{
+    color: white;
+    background-color: #222;
+    padding: 15px 5px;
+    margin: 0;
+}
+.controlArrow{
+    /* display: block; */
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+.controlArrow:hover>*{
+    fill: #ff6701;
+}
+.controls{
+    flex-shrink: 0;
+    justify-self: center;
+    height: 20px;
+    margin-left: 5px;
+    align-self: center;
+    position: relative;
+    width: 40px;
+}

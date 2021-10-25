@@ -1,0 +1,43 @@
+<div id="preview">
+    <div id="projects" class="section">
+      <div id="projContainer" class="container container-l" style="flex-direction: column;">
+        <h1>Наши проекты</h1>
+      </div>
+      <splide id="projectsSplide" [options]="{ type: 'loop',
+                  perPage :3,
+                  perMove:1 ,
+                  gap : '2rem' ,
+                  height:'auto',
+                  rewind: 'true'}">
+        <splide-slide *ngFor="let project of projects" style="max-width: 100%;">
+          <div class="projectInfo">
+            <div class="container">
+              <h4>{{project.name}}</h4>
+              <img src="{{env.serverUrl}}/{{project.frontImgLink}}" alt="">
+              <div class="projectText">{{project.shortDescr}}</div>
+              <button class="readMoreBut">Подробнее</button>
+            </div>
+          </div>
+        </splide-slide>
+      </splide>
+    </div>
+    <div id="team" class="section">
+      <div class="container container-l" style="flex-direction: column;">
+        <h1>Наша команда</h1>
+      </div>
+      <splide [options]="{type:'loop',perPage:5,perMove:1,autoplay:true, 
+              interval: 4000,
+              rewind: true}">
+        <splide-slide *ngFor="let teamWorker of teamWorkers">
+          <div class="userCard">
+            <div class="container container-l">
+              <img src="{{env.serverUrl}}/{{teamWorker.imgLink}}" alt="">
+              <h4>{{teamWorker.surname}} {{teamWorker.name}}</h4>
+              <p style="text-align: center;">{{teamWorker.project}}</p>
+            </div>
+          </div>
+        </splide-slide>
+      </splide>
+    </div>
+  </div>
+  

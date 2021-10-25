@@ -1,0 +1,4 @@
+<div class="container imgList">
+    <img [src]="serverUrl + '/' +imagelink" [alt]="imagelink" *ngFor="let imagelink of images"
+    (click)="selectImage(imagelink)" [ngClass]="{'selectedImage': selectedImage == imagelink}">
+</div>

@@ -1,0 +1,13 @@
+<p id="teamWorkerListHeader">Проекты</p>
+<div class="teamWorkerElem container" *ngFor="let teamWorker of teamWorkers let i=index"
+  [ngClass]="{'selected': selected==teamWorker._id}">
+  <div id="teamWorker" style="flex-grow: 1;" (click)="changeTeamWorker(teamWorker)">{{i+1}}. {{teamWorker.name}}</div>
+  <div class="controls">
+    <svg class="controlArrow" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" (click)="moveTeamWorker(teamWorker,true)">
+      <path class="arrow" d="M4 0l-4 4 1.5 1.5 2.5-2.5 2.5 2.5 1.5-1.5-4-4z" transform="translate(0 1)" fill="white" />
+    </svg>
+    <svg class="controlArrow" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" (click)="moveTeamWorker(teamWorker,false)">
+      <path class="arrow" d="M1.5 0l-1.5 1.5 4 4 4-4-1.5-1.5-2.5 2.5-2.5-2.5z" transform="translate(0 1)" fill="white" />
+    </svg>
+  </div>
+</div>

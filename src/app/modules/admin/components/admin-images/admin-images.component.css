@@ -1,0 +1,34 @@
+#imgsContainer{
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    color: black;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.hidden{
+    transition: .3s;
+    height: 0;
+    overflow: hidden;
+}
+.file-input{
+    width: 200px;
+    flex-shrink: 0;
+}
+.imgFormBtns{
+    width: 7em;
+    height: 3em;
+}
+.imgFormBtns:disabled{
+    transition: .3s;
+    color: gray;
+    opacity: .5;
+}
+.smallImg{
+    transition: .4s;
+    height: 300px;
+    width: 500px;
+    display: block;
+    border-radius: 5px;
+    align-self: center;
+}

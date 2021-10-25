@@ -1,0 +1,21 @@
+#adminHeader {
+    height: 100px;
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+    position: relative;
+}
+#adminHeader>.container{
+    height: 100%;
+}
+#adminHeadContainer {
+    width: 70%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 30px;
+    height: 100%;
+    gap: 50px;
+
+}
+.active{
+    text-decoration: underline;
+}

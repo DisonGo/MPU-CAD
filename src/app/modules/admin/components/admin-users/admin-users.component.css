@@ -1,0 +1,64 @@
+#teamWorkersContainer *{
+    /* border: 1px solid; */
+    background-color: white;
+    color: black;
+}
+#teamWorkersContainer {
+    
+}
+.projectFormBtnsCont{
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    /* flex-direction: column; */
+}
+.teamWorkerFormBtns{
+    width: 7em;
+    height: 3em;
+}
+.teamWorkerFormBtns:disabled{
+    transition: .3s;
+    color: gray;
+    opacity: .5;
+}
+#teamWorkerForm{
+    padding: 5px;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: start;
+    width: calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    position: relative;
+}
+#gallery{
+    transition: .1s;
+}
+.teamWorkerList{
+    height: 100%;
+}
+.formContainer{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.hidden{
+    transition: .3s;
+    height: 0;
+    overflow: hidden;
+}
+
+.controlArrow:hover*{
+    fill: #ff6701;
+}
+small{
+    color: slategrey !important;
+    font-size: .5em;
+    margin-bottom: 5px;
+}
+.smallImg{
+    transition: .4s;
+    height: 300px;
+    width: 300px;
+    display: block;
+    border-radius: 150px;
+    align-self: center;
+}
